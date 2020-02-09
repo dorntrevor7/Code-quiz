@@ -1,0 +1,26 @@
+/* Style for the body */
+
+body {
+    background-color: lightblue;
+    font-family: fantasy;
+}
+
+header {
+    background-color: rgb(248, 248, 248);
+    border-bottom: lightgray;
+    border-style: solid;
+}
+
+.highscore {
+    margin-left: 10px;
+}
+
+.container {
+    border-style: solid;
+    border-color: lightgray;
+    margin-top: 40px;
+    background-color: white;
+    width: 500px;
+    padding: 20px;
+    text-align: center;
+}
