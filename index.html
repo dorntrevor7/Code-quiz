@@ -12,20 +12,22 @@
 
 <body>
     <header>
+        <!-- Displays the header: view highscore and the time at the top of of the page -->
         <div class="row">
             <div class="col-3 highscore">
-                View Highscore
+                <a href="#highScoreLink">View Highscore: </a>
             </div>
             <div class="col-7"></div>
             <div class="col">
-                Time:
+                Time: <span id="timeSpan">30</span>
             </div>
         </div>
     </header>
+    <!-- Where the quiz prompts the questions -->
     <main class="container">
         <div class="row">
-            <div class="col">
-                <h1 id="quiz">Start the Coding Quiz</h1>
+            <div class="col" id="startQuiz">
+                <h1>Start the Coding Quiz</h1>
                 <p>This is a coding quiz to see what knowledge you have on the HTML, CSS, and JS</p>
             </div>
         </div>
@@ -33,11 +35,31 @@
         <hr>
 
         <div class="row">
-            <div class="col">
-                <button type="button" id="startButton" class="btn btn-primary">Primary</button>
+            <div class="col" id="listButtons">
+                <button type="button" id="startButton" class="btn btn-primary">Start</button>
             </div>
         </div>
+
+        <h1 id="question-container"></h1>
+
+        <h2 id="answer-container"></h2>
+        <hr>
+        <p id="correct"></p>
+        <form id="highscore-form" method="POST">
+            <label for="highscore-text">Add a Highscore Name:</label>
+            <input type="text" placeholder="name" name="highscore-text" id="highscore-input" />
+        </form>
     </main>
+
+    <!-- Highscores diplayings -->
+    <section id="highScoreLink" class="container">
+        <br><br>
+        <h1>Highscore:</h1>
+        <br>
+        <hr>
+        <br>
+        <ul id="highscoreslist"><span id="highscore"></span></ul>
+    </section>
 
     <script src="script.js"></script>
 </body>
