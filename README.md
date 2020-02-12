@@ -3,7 +3,7 @@
 For this project I created a timed quiz using one html file, one css file, and one javascript file. This is a timed quiz to check to see if you know the content of developing all the way up to javascript. 
 
 **Quiz Rules**
-
+ 
 * WHEN I click the start button
 * THEN a 30 second timer starts and I am then presented with a question
 * WHEN I answer that question

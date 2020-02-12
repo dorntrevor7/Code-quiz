@@ -2,7 +2,7 @@
 
 var questions = [{
         question: "Commonly used data types DO NOT include:",
-        answers: [
+        answers: [ 
             { text: "strings", isCorrect: false },
             { text: "booleans", isCorrect: false },
             { text: "alerts", isCorrect: true },
