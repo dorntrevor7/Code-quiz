@@ -64,6 +64,8 @@ var $container = document.querySelector(".container");
 //Creates a variables being called
 var seconds = 30;
 var timeIncrement;
+
+// highscores array 
 var highscores = [];
 
 // Hides the highscore user input
@@ -187,48 +189,51 @@ function endGame() {
 function highscore() {
     // Displays highscore user input
     document.getElementById("highscore-form").style.display = "initial";
-
+    
     // get most recent highscore
     $highscore.textContent = (correctAnswers + " correct answers");
-
+    
     // loop through the array in highscores to diplay names
     function forloopHigh() {
         for (var i = 0; i < highscores.length; i++) {
             var highscore = highscores[i];
-
+            
             // Creates the list of highscores element
             var li = document.createElement("li");
             li.textContent = highscore;
             li.setAttribute("data-index", i);
             highscoreslist.appendChild(li);
         }
-        // storing highscores
     }
-
-
-    function storeHighscores() {
-        // Stringify and set "highscores" key in localStorage to highscores array
-        localStorage.setItem("highscores", JSON.stringify(highscores));
-    }
+    
+    
     // When form is submitted
     highscoresform.addEventListener("submit", function(event) {
         event.preventDefault();
-
+        
         var highscoreInputText = highscoreInput.value.trim();
-
+        
         // Return from function early if submitted highscoreText is blank
         if (highscoreInputText === "") {
             return;
         }
-
+        
         // Add new highscoreText to highscoreArr array, clear the input
         highscores.push(highscoreInputText);
-        highscoreInput.value = "";
-
+        highscoreInput.value = ("");
+        
         // Re-render the forloophigh
-        storeHighscores();
         forloopHigh();
     });
+}
+
+// storing highscores
+function storeHighscores() {
+        // Store
+        localStorage.setItem("highscores", (highscores + $highscore));
+        // Retrieve
+        highscore.innerHTML = localStorage.getItem("highscores");
+        console.log(highscores);
 }
 
 function playagain() {
@@ -241,4 +246,5 @@ function playagain() {
 
 function reload() {
     location.reload();
+    storeHighscores();
 }

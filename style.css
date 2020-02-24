@@ -25,6 +25,7 @@ header {
     text-align: center;
 }
 
+/* Button style */
 button:hover {
     background-color: lightskyblue;
 }

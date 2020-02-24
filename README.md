@@ -15,5 +15,13 @@ For this project I created a timed quiz using one html file, one css file, and o
 * WHEN the game is over
 * THEN I can save my initials and score into the highscores sections
 
+<br>
+
+The following image demonstrates on the computer:
+
+![SC Code Quiz computer display](assests/code-quiz-sc.png)
+
+<br>
+
 Lets see how good you are!!:
  [Code Quiz](https://dorntrevor7.github.io/Code-quiz/)
